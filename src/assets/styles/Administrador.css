@@ -1,0 +1,15 @@
+.administrador {
+    height: 100vh;
+    background-image: linear-gradient(to right top, #f1683f, #fa4c54, #fc2a6f, #f4008e, #df00b1, #ce00c3, #b700d5, #941ae9, #8a14ee, #7f0ff3, #720af9, #6208fe);
+}
+
+tr td {
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.usuarios {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
