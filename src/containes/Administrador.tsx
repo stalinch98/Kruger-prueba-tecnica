@@ -51,7 +51,7 @@ const Administrador = () => {
                                 </button>
                                 {" "}
                                 <button className={"btn btn-danger"} onClick={() => {
-                                    dispatch({type: ADMINISTRADOR_ELIMINAR_USER, payload: dato.email})
+                                    dispatch({type: ADMINISTRADOR_ELIMINAR_USER, payload: dato})
                                 }}>Eliminar
                                 </button>
                             </td>
