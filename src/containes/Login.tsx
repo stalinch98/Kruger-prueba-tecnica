@@ -1,16 +1,34 @@
 import backgroundImage from '../assets/img/login_img.svg';
 import '../assets/styles/Login.css';
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {LOGIN_INGRESAR, LOGIN_LOAD_INITIAL_DATA} from "../store/login/types";
 import {useEffect} from "react";
+import {RootState} from "../store";
+import {objectIsVoid} from "../helpers/utilsObject";
+import {useNavigate} from "react-router-dom";
 
 const Login = () => {
 
+    const {
+        usuarioLogueado,
+    } = useSelector((state: RootState) => state.LoginReduce);
+
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     useEffect(() => {
         dispatch({type: LOGIN_LOAD_INITIAL_DATA});
     }, []);
+
+    useEffect(() => {
+        if (!objectIsVoid(usuarioLogueado)) {
+            if (usuarioLogueado.rol === 'Administrador') {
+                navigate('/administrador');
+            } else {
+                navigate('/');
+            }
+        }
+    }, [usuarioLogueado]);
 
     return (
         <section className="login">
@@ -38,7 +56,7 @@ const Login = () => {
                         onClick={() => {
                             dispatch({
                                 type: LOGIN_INGRESAR,
-                                payload: {email: 'stalin_dany98@hotmail.com', password: 'asd1235'}
+                                payload: {email: 'stalin_dany98@hotmail.com', password: 'asd123'}
                             })
                         }}>
                     Login

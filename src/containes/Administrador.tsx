@@ -1,6 +1,17 @@
 import '../assets/styles/Administrador.css'
+import {useEffect} from "react";
+import {objectIsVoid} from "../helpers/utilsObject";
+import {useSelector} from "react-redux";
+import {RootState} from "../store";
+import {useNavigate} from "react-router-dom";
 
 const Administrador = () => {
+
+    const navigate = useNavigate();
+
+    const {
+        usuarioLogueado,
+    } = useSelector((state: RootState) => state.LoginReduce);
 
     const data = [
         {id: 1, personaje: "Naruto", anime: "Naruto"},
@@ -10,6 +21,12 @@ const Administrador = () => {
         {id: 5, personaje: "Edward Elric", anime: "Fullmetal Alchemist: Brotherhood"},
         {id: 6, personaje: "Seto Kaiba", anime: "Yu-Gi-Oh!"},
     ];
+
+    useEffect(() => {
+        if (objectIsVoid(usuarioLogueado)) {
+            navigate('/');
+        }
+    }, []);
 
     return (
         <section className="administrador">
