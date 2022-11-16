@@ -20,4 +20,7 @@ export interface Usuario {
     email: string,
     rol: string,
     password: string
+    fechaNacimiento?: string,
+    direccionDomicilio?: string,
+    telefono?: string,
 }

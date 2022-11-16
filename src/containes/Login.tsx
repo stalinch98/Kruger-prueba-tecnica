@@ -2,12 +2,19 @@ import backgroundImage from '../assets/img/login_img.svg';
 import '../assets/styles/Login.css';
 import {useDispatch, useSelector} from "react-redux";
 import {LOGIN_INGRESAR, LOGIN_LOAD_INITIAL_DATA} from "../store/login/types";
-import {useEffect} from "react";
+import {useEffect, useState} from "react";
 import {RootState} from "../store";
 import {objectIsVoid} from "../helpers/utilsObject";
 import {useNavigate} from "react-router-dom";
 
+interface ILogin {
+    email: string;
+    password: string;
+}
+
 const Login = () => {
+
+    const [formLogin, setFormLogin] = useState({} as ILogin);
 
     const {
         usuarioLogueado,
@@ -42,6 +49,7 @@ const Login = () => {
                     <input
                         placeholder="juan@gmail.com"
                         className="login__input"
+                        onChange={(e) => setFormLogin({...formLogin, email: e.target.value})}
                     />
                 </label>
                 <label className="login__text">
@@ -49,6 +57,7 @@ const Login = () => {
                     <input
                         placeholder="********"
                         className="login__input"
+                        onChange={(e) => setFormLogin({...formLogin, password: e.target.value})}
                     />
                     <i className="bx bx-show login__password--show"/>
                 </label>
@@ -56,7 +65,7 @@ const Login = () => {
                         onClick={() => {
                             dispatch({
                                 type: LOGIN_INGRESAR,
-                                payload: {email: 'stalin_dany98@hotmail.com', password: 'asd123'}
+                                payload: formLogin
                             })
                         }}>
                     Login

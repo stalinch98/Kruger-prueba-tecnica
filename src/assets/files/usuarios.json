@@ -6,7 +6,120 @@
       "apellidos": "Chiguano Guaynalla",
       "email": "stalin_dany98@hotmail.com",
       "rol": "Administrador",
-      "password": "asd123"
+      "password": "asd123",
+      "fechaNacimiento": "21-12-1998",
+      "direccionDomicilio": "Joaquin Ruales",
+      "telefono": "0995882909"
+    },
+    {
+      "cedula": "52472-100",
+      "nombres": "Ilka",
+      "apellidos": "Danneil",
+      "email": "idanneil0@g.co",
+      "rol": "Empleado",
+      "password": "JKEOys",
+      "fechaNacimiento": "22-01-2021",
+      "direccionDomicilio": "2748 Superior Avenue",
+      "telefono": "611-279-4829"
+    },
+    {
+      "cedula": "60905-0001",
+      "nombres": "Gordon",
+      "apellidos": "Warrilow",
+      "email": "gwarrilow1@nationalgeographic.com",
+      "rol": "Empleado",
+      "password": "DXWwih",
+      "fechaNacimiento": "01-03-2020",
+      "direccionDomicilio": "212 Canary Crossing",
+      "telefono": "212-699-0573"
+    },
+    {
+      "cedula": "54569-0197",
+      "nombres": "Kipper",
+      "apellidos": "Colson",
+      "email": "kcolson2@reuters.com",
+      "rol": "Empleado",
+      "password": "CJIoj5bj",
+      "fechaNacimiento": "24-03-2020",
+      "direccionDomicilio": "6 Dawn Center",
+      "telefono": "341-105-0914"
+    },
+    {
+      "cedula": "51079-953",
+      "nombres": "Karol",
+      "apellidos": "Lyenyng",
+      "email": "klyenyng3@tripadvisor.com",
+      "rol": "Empleado",
+      "password": "2Lt0vBpsd",
+      "fechaNacimiento": "10-06-2021",
+      "direccionDomicilio": "574 Alpine Plaza",
+      "telefono": "506-753-0403"
+    },
+    {
+      "cedula": "65162-765",
+      "nombres": "Gretal",
+      "apellidos": "M'cowis",
+      "email": "gmcowis4@indiatimes.com",
+      "rol": "Empleado",
+      "password": "qAcMK3SV",
+      "fechaNacimiento": "19-12-2021",
+      "direccionDomicilio": "71187 Mitchell Plaza",
+      "telefono": "171-527-7485"
+    },
+    {
+      "cedula": "50952-001",
+      "nombres": "Gertrude",
+      "apellidos": "Asgodby",
+      "email": "gasgodby5@discovery.com",
+      "rol": "Empleado",
+      "password": "hodesyJs",
+      "fechaNacimiento": "16-11-2020",
+      "direccionDomicilio": "18069 Drewry Place",
+      "telefono": "346-849-9290"
+    },
+    {
+      "cedula": "58633-232",
+      "nombres": "Lindy",
+      "apellidos": "Elies",
+      "email": "lelies6@sun.com",
+      "rol": "Empleado",
+      "password": "co2nozcP",
+      "fechaNacimiento": "16-03-2020",
+      "direccionDomicilio": "07277 Spenser Plaza",
+      "telefono": "408-147-3430"
+    },
+    {
+      "cedula": "60986-1011",
+      "nombres": "Cheryl",
+      "apellidos": "Alen",
+      "email": "calen7@netscape.com",
+      "rol": "Empleado",
+      "password": "tonzmzHV",
+      "fechaNacimiento": "12-12-2019",
+      "direccionDomicilio": "30 Dorton Circle",
+      "telefono": "683-100-0536"
+    },
+    {
+      "cedula": "35356-687",
+      "nombres": "Mikael",
+      "apellidos": "Onyon",
+      "email": "monyon8@sphinn.com",
+      "rol": "Empleado",
+      "password": "jKjdyBb",
+      "fechaNacimiento": "08-10-2021",
+      "direccionDomicilio": "4864 Harper Circle",
+      "telefono": "964-179-3438"
+    },
+    {
+      "cedula": "60905-0402",
+      "nombres": "Diahann",
+      "apellidos": "de Guerre",
+      "email": "ddeguerre9@jimdo.com",
+      "rol": "Empleado",
+      "password": "maXtrZVwny2",
+      "fechaNacimiento": "13-07-2020",
+      "direccionDomicilio": "3 Spaight Avenue",
+      "telefono": "716-622-9189"
     }
   ]
 }
