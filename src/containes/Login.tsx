@@ -1,7 +1,12 @@
 import backgroundImage from '../assets/img/login_img.svg';
 import '../assets/styles/Login.css';
+import {useDispatch} from "react-redux";
+import {LOGIN_INGRESAR} from "../store/login/types";
 
 const Login = () => {
+
+    const dispatch = useDispatch();
+
     return (
         <section className="login">
             <figure className="login__picture">
@@ -24,7 +29,10 @@ const Login = () => {
                     />
                     <i className="bx bx-show login__password--show"/>
                 </label>
-                <button type="submit" className="login__cta">
+                <button type="button" className="login__cta"
+                        onClick={() => {
+                            dispatch({type: LOGIN_INGRESAR, payload: 'asfasgfa'})
+                        }}>
                     Login
                 </button>
             </form>

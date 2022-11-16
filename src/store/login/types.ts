@@ -1,0 +1,2 @@
+export const LOGIN_INGRESAR = 'LOGIN_INGRESAR';
+export const LOGIN_SET_ROL = 'LOGIN_SET_ROL';
