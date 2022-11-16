@@ -1,0 +1,12 @@
+{
+  "data": [
+    {
+      "cedula": "1725049421",
+      "nombres": "Stalin Daniel",
+      "apellidos": "Chiguano Guaynalla",
+      "email": "stalin_dany98@hotmail.com",
+      "rol": "Administrador",
+      "password": "asd123"
+    }
+  ]
+}
