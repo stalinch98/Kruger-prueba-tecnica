@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../store";
 import {useNavigate} from "react-router-dom";
 import {ADMINISTRADOR_ELIMINAR_USER} from "../store/administrador/types";
-import {setCurrentUser, setOpenModal} from "../store/administrador/actions";
+import {setCurrentUser, setIsEdit, setOpenModal} from "../store/administrador/actions";
 import ModalActualizarUsuario from "../components/ModalActualizarUsuario";
 
 const Administrador = () => {
@@ -27,7 +27,9 @@ const Administrador = () => {
     return (
         <section className="administrador">
             <div className="usuarios">
-                <button className={"btn btn-primary"}>
+                <button className={"btn btn-primary"} onClick={() => {
+                    dispatch(setOpenModal(true));
+                }}>
                     Registrar usuario
                 </button>
                 <table>
@@ -51,6 +53,7 @@ const Administrador = () => {
                             <td>
                                 <button className={"btn btn-success"} onClick={() => {
                                     dispatch(setCurrentUser(dato));
+                                    dispatch(setIsEdit(true));
                                     dispatch(setOpenModal(true));
                                 }}>
                                     Editar

@@ -1,24 +1,32 @@
 import Modal from "react-bootstrap/Modal";
-import {setOpenModal} from "../store/administrador/actions";
+import {setCurrentUser, setOpenModal} from "../store/administrador/actions";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../store";
 import {useEffect, useState} from "react";
 import {Usuario} from "../interfaces/login";
-import {ADMINISTRADOR_SET_USERS} from "../store/administrador/types";
+import {ADMINISTRADOR_CREAR_USUARIO, ADMINISTRADOR_SET_USERS} from "../store/administrador/types";
 
 const ModalActualizarUsuario = () => {
 
     const dispatch = useDispatch();
 
     const {
-        openModal, currentUser
+        openModal, currentUser, isEdit
     } = useSelector((state: RootState) => state.AdministradorReduce);
 
-    const [updatedUser, setUpdatedUser] = useState<Usuario>(currentUser);
+    const [updatedUser, setUpdatedUser] = useState<Usuario>({} as Usuario);
 
     useEffect(() => {
         setUpdatedUser(currentUser);
-    }, [openModal]);
+    }, [isEdit, openModal]);
+
+    const handleSubmit = () => {
+        if (isEdit) {
+            dispatch({type: ADMINISTRADOR_SET_USERS, payload: updatedUser});
+        } else {
+            dispatch({type: ADMINISTRADOR_CREAR_USUARIO, payload: updatedUser});
+        }
+    }
 
     return (
         <div>
@@ -29,10 +37,11 @@ const ModalActualizarUsuario = () => {
                 centered
             >
                 <Modal.Header closeButton onClick={() => {
+                    dispatch(setCurrentUser({} as Usuario));
                     dispatch(setOpenModal(false));
                 }}>
                     <Modal.Title id="contained-modal-title-vcenter">
-                        Actualizar usuario
+                        {isEdit ? 'Editar usuario' : 'Crear usuario'}
                     </Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
@@ -40,24 +49,24 @@ const ModalActualizarUsuario = () => {
                         <div className="row">
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Nombres</label>
-                                <input type="text" className="form-control" defaultValue={currentUser.nombres}
+                                <input type="text" className="form-control" defaultValue={updatedUser.nombres}
                                        onChange={(e) => setUpdatedUser({...updatedUser, nombres: e.target.value})}/>
                             </div>
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Apellidos</label>
-                                <input type="text" className="form-control" defaultValue={currentUser.apellidos}
+                                <input type="text" className="form-control" defaultValue={updatedUser.apellidos}
                                        onChange={(e) => setUpdatedUser({...updatedUser, apellidos: e.target.value})}/>
                             </div>
                         </div>
                         <div className="row">
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Cédula</label>
-                                <input type="text" className="form-control" defaultValue={currentUser.cedula}
+                                <input type="text" className="form-control" defaultValue={updatedUser.cedula}
                                        onChange={(e) => setUpdatedUser({...updatedUser, cedula: e.target.value})}/>
                             </div>
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Email</label>
-                                <input type="text" className="form-control" defaultValue={currentUser.email}
+                                <input type="text" className="form-control" defaultValue={updatedUser.email}
                                        onChange={(e) => setUpdatedUser({...updatedUser, email: e.target.value})}/>
                             </div>
                         </div>
@@ -65,12 +74,11 @@ const ModalActualizarUsuario = () => {
                 </Modal.Body>
                 <Modal.Footer>
                     <button className="btn btn-secondarybtn btn-secondary" onClick={() => {
+                        dispatch(setCurrentUser({} as Usuario));
                         dispatch(setOpenModal(false));
                     }}>Cerrar
                     </button>
-                    <button className="btn btn-secondarybtn btn-primary" onClick={() => {
-                        dispatch({type: ADMINISTRADOR_SET_USERS, payload: updatedUser});
-                    }}>Guardar
+                    <button className="btn btn-secondarybtn btn-primary" onClick={handleSubmit}>Guardar
                     </button>
                 </Modal.Footer>
             </Modal>

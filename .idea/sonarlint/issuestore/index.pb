@@ -13,15 +13,11 @@ K
 src/index.tsx,5\a\5ab44fe33ca96299f51ad4778a73e425b92bf439
 ;
 src/App.tsx,8\3\835da56f32df714aaed6285a5b7fc3a7807851e4
-9
-	yarn.lock,5\3\53585a096fe3a3b96321113856ae62602995a33b
 H
 src/store/login/types.ts,7\3\7386624bd162808a6bd8ca8e7de1a57d57d2cce0
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
 I
 src/interfaces/general.ts,d\c\dca51f5fdf805a3bb4a7afe9aa54383bcca07fcb
 I
