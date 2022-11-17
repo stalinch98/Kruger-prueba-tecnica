@@ -10,6 +10,16 @@ Este proyecto está desarrollado en React con TypeScript, CSS3, Html5 y Bootstra
 usuario: "stalin_dany98@hotmail.com"
 contraseña: "asd123"
 ```
+
+## Credenciales de algunos usuarios con rol de empleado  
+```sh
+usuario: "gwarrilow1@nationalgeographic.com"
+contraseña: "DXWwih"
+
+usuario: "idanneil0@g.co"
+contraseña: "asd123"
+```
+
 ## La primera ruta que parecerá será la pantalla de iniciar sesión
 `localhost:3000`
 
