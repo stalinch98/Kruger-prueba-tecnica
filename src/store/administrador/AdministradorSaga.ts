@@ -48,7 +48,7 @@ function* crearUsuario(action: { type: string, payload: Usuario }) {
             id: maxId + 1,
             userName: generteUserName(action.payload.nombres, action.payload.apellidos),
             password: generatePassword(),
-            estaVacunado: false,
+            estaVacunado: 'No',
             tipoVacuna: null,
             fechaVacunacion: null,
             numeroDosis: null,
