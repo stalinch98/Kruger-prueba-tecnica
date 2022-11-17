@@ -10,11 +10,12 @@
       "password": "asd123",
       "fechaNacimiento": "21-12-1998",
       "direccionDomicilio": "Joaquin Ruales",
-      "telefono": "0995882909"
+      "telefono": "0995882909",
+      "userName": "stalin_ch98"
     },
     {
       "id": 2,
-      "cedula": "52472-100",
+      "cedula": "52472100",
       "nombres": "Ilka",
       "apellidos": "Danneil",
       "email": "idanneil0@g.co",
@@ -22,11 +23,12 @@
       "password": "JKEOys",
       "fechaNacimiento": "22-01-2021",
       "direccionDomicilio": "2748 Superior Avenue",
-      "telefono": "611-279-4829"
+      "telefono": "611-279-4829",
+      "userName": "ilka_da12"
     },
     {
       "id": 3,
-      "cedula": "60905-0001",
+      "cedula": "609050001",
       "nombres": "Gordon",
       "apellidos": "Warrilow",
       "email": "gwarrilow1@nationalgeographic.com",
@@ -34,11 +36,12 @@
       "password": "DXWwih",
       "fechaNacimiento": "01-03-2020",
       "direccionDomicilio": "212 Canary Crossing",
-      "telefono": "212-699-0573"
+      "telefono": "212-699-0573",
+      "userName": "gordon_wa20"
     },
     {
       "id": 4,
-      "cedula": "54569-0197",
+      "cedula": "545690197",
       "nombres": "Kipper",
       "apellidos": "Colson",
       "email": "kcolson2@reuters.com",
@@ -46,11 +49,12 @@
       "password": "CJIoj5bj",
       "fechaNacimiento": "24-03-2020",
       "direccionDomicilio": "6 Dawn Center",
-      "telefono": "341-105-0914"
+      "telefono": "341-105-0914",
+      "userName": "kipper_co40"
     },
     {
       "id": 5,
-      "cedula": "51079-953",
+      "cedula": "51079953",
       "nombres": "Karol",
       "apellidos": "Lyenyng",
       "email": "klyenyng3@tripadvisor.com",
@@ -58,11 +62,12 @@
       "password": "2Lt0vBpsd",
       "fechaNacimiento": "10-06-2021",
       "direccionDomicilio": "574 Alpine Plaza",
-      "telefono": "506-753-0403"
+      "telefono": "506-753-0403",
+      "userName": "karol_ly21"
     },
     {
       "id": 6,
-      "cedula": "65162-765",
+      "cedula": "65162765",
       "nombres": "Gretal",
       "apellidos": "M'cowis",
       "email": "gmcowis4@indiatimes.com",
@@ -70,11 +75,12 @@
       "password": "qAcMK3SV",
       "fechaNacimiento": "19-12-2021",
       "direccionDomicilio": "71187 Mitchell Plaza",
-      "telefono": "171-527-7485"
+      "telefono": "171-527-7485",
+      "userName": "gretal_mc21"
     },
     {
       "id": 7,
-      "cedula": "50952-001",
+      "cedula": "50952001",
       "nombres": "Gertrude",
       "apellidos": "Asgodby",
       "email": "gasgodby5@discovery.com",
@@ -82,11 +88,12 @@
       "password": "hodesyJs",
       "fechaNacimiento": "16-11-2020",
       "direccionDomicilio": "18069 Drewry Place",
-      "telefono": "346-849-9290"
+      "telefono": "346-849-9290",
+      "userName": "gertrude_as20"
     },
     {
       "id": 8,
-      "cedula": "58633-232",
+      "cedula": "58633232",
       "nombres": "Lindy",
       "apellidos": "Elies",
       "email": "lelies6@sun.com",
@@ -94,11 +101,12 @@
       "password": "co2nozcP",
       "fechaNacimiento": "16-03-2020",
       "direccionDomicilio": "07277 Spenser Plaza",
-      "telefono": "408-147-3430"
+      "telefono": "408-147-3430",
+      "userName": "lindy_el20"
     },
     {
       "id": 9,
-      "cedula": "60986-1011",
+      "cedula": "609861011",
       "nombres": "Cheryl",
       "apellidos": "Alen",
       "email": "calen7@netscape.com",
@@ -106,11 +114,12 @@
       "password": "tonzmzHV",
       "fechaNacimiento": "12-12-2019",
       "direccionDomicilio": "30 Dorton Circle",
-      "telefono": "683-100-0536"
+      "telefono": "683-100-0536",
+      "userName": "cheryl_al19"
     },
     {
       "id": 10,
-      "cedula": "35356-687",
+      "cedula": "35356687",
       "nombres": "Mikael",
       "apellidos": "Onyon",
       "email": "monyon8@sphinn.com",
@@ -118,11 +127,12 @@
       "password": "jKjdyBb",
       "fechaNacimiento": "08-10-2021",
       "direccionDomicilio": "4864 Harper Circle",
-      "telefono": "964-179-3438"
+      "telefono": "964-179-3438",
+      "userName": "mikael_on21"
     },
     {
       "id": 11,
-      "cedula": "60905-0402",
+      "cedula": "609050402",
       "nombres": "Diahann",
       "apellidos": "de Guerre",
       "email": "ddeguerre9@jimdo.com",
@@ -130,7 +140,8 @@
       "password": "maXtrZVwny2",
       "fechaNacimiento": "13-07-2020",
       "direccionDomicilio": "3 Spaight Avenue",
-      "telefono": "716-622-9189"
+      "telefono": "716-622-9189",
+      "userName": "diahann_de20"
     }
   ]
 }

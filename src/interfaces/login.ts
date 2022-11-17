@@ -24,4 +24,5 @@ export interface Usuario {
     fechaNacimiento?: string,
     direccionDomicilio?: string,
     telefono?: string,
+    userName: string,
 }

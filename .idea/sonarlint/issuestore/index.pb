@@ -28,5 +28,3 @@ B
 src/store/index.ts,7\8\788f62f848ec0936ef56cb3abc11e629c69f787c
 @
 src/App.test.tsx,1\f\1fc1c06a0502bf303f8ba35e530938a98e7e35b2
-J
-src/helpers/utilsObject.ts,4\2\420c5ae9c2a6b0329911b6c5663c68f4383a509f

@@ -5,6 +5,7 @@ import {RootState} from "../index";
 import {setDataUsuarios} from "../login/actions";
 import {setCurrentUser, setIsEdit, setOpenModal} from "./actions";
 import {toast} from "react-toastify";
+import {generatePassword, generteUserName} from "../../helpers/utilsObject";
 
 const Login = (state: RootState) => state.LoginReduce;
 
@@ -42,7 +43,12 @@ function* crearUsuario(action: { type: string, payload: Usuario }) {
         });
     } else {
         let maxId = Math.max(...dataUsuarios.map(item => item.id));
-        yield put(setDataUsuarios([...dataUsuarios, {...action.payload, id: maxId + 1}]));
+        yield put(setDataUsuarios([...dataUsuarios, {
+            ...action.payload,
+            id: maxId + 1,
+            userName: generteUserName(action.payload.nombres, action.payload.apellidos),
+            password: generatePassword()
+        }]));
         yield put(setOpenModal(false));
         toast.success('Usuario creado exitosamente', {
             position: toast.POSITION.TOP_RIGHT
