@@ -5,6 +5,8 @@ import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../store";
 import {useNavigate} from "react-router-dom";
 import {ADMINISTRADOR_ELIMINAR_USER} from "../store/administrador/types";
+import {setCurrentUser, setOpenModal} from "../store/administrador/actions";
+import ModalActualizarUsuario from "../components/ModalActualizarUsuario";
 
 const Administrador = () => {
 
@@ -40,13 +42,17 @@ const Administrador = () => {
                     </thead>
 
                     <tbody>
-                    {dataUsuarios.filter(x => x.email !== usuarioLogueado.email).map((dato) => (
-                        <tr key={dato.cedula}>
+                    {dataUsuarios.filter(x => x.email !== usuarioLogueado.email).map((dato, index) => (
+                        <tr key={index}>
+                            <td>{dato.cedula}</td>
                             <td>{dato.nombres}</td>
                             <td>{dato.apellidos}</td>
                             <td>{dato.email}</td>
                             <td>
-                                <button className={"btn btn-success"}>
+                                <button className={"btn btn-success"} onClick={() => {
+                                    dispatch(setCurrentUser(dato));
+                                    dispatch(setOpenModal(true));
+                                }}>
                                     Editar
                                 </button>
                                 {" "}
@@ -60,6 +66,7 @@ const Administrador = () => {
                     </tbody>
                 </table>
             </div>
+            <ModalActualizarUsuario/>
         </section>
     )
 }
