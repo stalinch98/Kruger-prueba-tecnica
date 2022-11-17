@@ -13,6 +13,7 @@ function* eliminarUsuario(action: { type: string, payload: Usuario }) {
     const {dataUsuarios}: StateLogin = yield select(Login);
     let newDataUsuarios = dataUsuarios.filter((user: Usuario) => user.email !== action.payload.email);
     yield put(setDataUsuarios(newDataUsuarios));
+    localStorage.setItem('state', JSON.stringify(newDataUsuarios));
     toast.success('Usuario eliminado exitosamente', {
         position: toast.POSITION.TOP_RIGHT
     });
@@ -26,6 +27,7 @@ function* actualizarUsuario(action: { type: string, payload: Usuario }) {
             cedula: action.payload.cedula, email: action.payload.email
         } : item);
     yield put(setDataUsuarios(newData));
+    localStorage.setItem('state', JSON.stringify(newData));
     yield put(setCurrentUser({} as Usuario));
     yield put(setIsEdit(false));
     yield put(setOpenModal(false));
@@ -44,6 +46,16 @@ function* crearUsuario(action: { type: string, payload: Usuario }) {
     } else {
         let maxId = Math.max(...dataUsuarios.map(item => item.id));
         yield put(setDataUsuarios([...dataUsuarios, {
+            ...action.payload,
+            id: maxId + 1,
+            userName: generteUserName(action.payload.nombres, action.payload.apellidos),
+            password: generatePassword(),
+            estaVacunado: 'No',
+            tipoVacuna: null,
+            fechaVacunacion: null,
+            numeroDosis: null,
+        }]));
+        localStorage.setItem('state', JSON.stringify([...dataUsuarios, {
             ...action.payload,
             id: maxId + 1,
             userName: generteUserName(action.payload.nombres, action.payload.apellidos),

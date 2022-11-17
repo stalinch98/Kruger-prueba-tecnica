@@ -31,7 +31,9 @@ function* buscarUsuario(action: { type: string, payload: CurrentUserTryLogin }) 
 
 function* loadInitialData() {
     let data: Usuario[] = jsonData.data;
-    yield fork(setDataUsuariosByJson, data);
+    localStorage.setItem('state', JSON.stringify(data));
+    let dataStorage = localStorage.getItem('state');
+    yield fork(setDataUsuariosByJson, JSON.parse(dataStorage ?? '[]'));
 }
 
 function* watchLoginGetRol() {

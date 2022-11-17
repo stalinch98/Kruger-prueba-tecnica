@@ -26,6 +26,7 @@ function* actualizarUsuario(action: { type: string, payload: Usuario }) {
             numeroDosis: action.payload.estaVacunado === 'Si' ? action.payload.numeroDosis : null,
         } : item);
     yield put(setDataUsuarios(newData));
+    localStorage.setItem('state', JSON.stringify(newData));
     yield put(setOpenModal(false));
     toast.success('Usuario actualizado exitosamente', {
         position: toast.POSITION.TOP_RIGHT
