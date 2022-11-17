@@ -4,6 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {Usuario} from "../interfaces/login";
 import {RootState} from "../store";
 import {useEffect, useState} from "react";
+import {EMPLEADO_ACTUALIZAR_INFORMACION} from "../store/empleado/types";
 
 const ModalEmpleado = () => {
 
@@ -173,7 +174,9 @@ const ModalEmpleado = () => {
                         dispatch(setOpenModal(false));
                     }}>Cerrar
                     </button>
-                    <button className="btn btn-secondarybtn btn-primary">Guardar
+                    <button className="btn btn-secondarybtn btn-primary" onClick={() => {
+                        dispatch({type: EMPLEADO_ACTUALIZAR_INFORMACION, payload: updatedUser});
+                    }}>Guardar
                     </button>
                 </Modal.Footer>
             </Modal>

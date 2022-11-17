@@ -18,8 +18,6 @@ H
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
 I
 src/components/Footer.tsx,6\a\6a1906fbef47b21e13258a3accfe644e256f3344
-I
-src/components/Layout.tsx,b\4\b4694ebb3940bc08ad73f040eaf0c8d049cc8dab
 B
 src/store/index.ts,7\8\788f62f848ec0936ef56cb3abc11e629c69f787c
 @
