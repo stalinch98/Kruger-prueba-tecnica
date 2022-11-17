@@ -47,7 +47,11 @@ function* crearUsuario(action: { type: string, payload: Usuario }) {
             ...action.payload,
             id: maxId + 1,
             userName: generteUserName(action.payload.nombres, action.payload.apellidos),
-            password: generatePassword()
+            password: generatePassword(),
+            estaVacunado: false,
+            tipoVacuna: null,
+            fechaVacunacion: null,
+            numeroDosis: null,
         }]));
         yield put(setOpenModal(false));
         toast.success('Usuario creado exitosamente', {

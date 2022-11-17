@@ -32,7 +32,7 @@ const Login = () => {
             if (usuarioLogueado.rol === 'Administrador') {
                 navigate('/administrador');
             } else {
-                navigate('/');
+                navigate('/empleado');
             }
         }
     }, [usuarioLogueado]);

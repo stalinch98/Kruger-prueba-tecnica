@@ -32,13 +32,16 @@ const Administrador = () => {
                 }}>
                     Registrar usuario
                 </button>
-                <table>
+                <table className='table-wrap is-striped'>
                     <thead>
                     <tr>
                         <th>Cédula</th>
                         <th>Nombres</th>
                         <th>Apellidos</th>
                         <th>Email</th>
+                        <th>Tipo vacuna</th>
+                        <th>Fecha vacunación</th>
+                        <th>Numero dosis</th>
                         <th>Acciones</th>
                     </tr>
                     </thead>
@@ -50,6 +53,9 @@ const Administrador = () => {
                             <td>{dato.nombres}</td>
                             <td>{dato.apellidos}</td>
                             <td>{dato.email}</td>
+                            <td>{dato.tipoVacuna}</td>
+                            <td>{dato.fechaVacunacion}</td>
+                            <td>{dato.numeroDosis}</td>
                             <td>
                                 <button className={"btn btn-success"} onClick={() => {
                                     dispatch(setCurrentUser(dato));

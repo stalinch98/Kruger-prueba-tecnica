@@ -9,7 +9,13 @@ tr td {
 
 .usuarios {
     position: absolute;
-    top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30px;
+    left: 25%;
+}
+
+.login__text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    position: relative;
 }

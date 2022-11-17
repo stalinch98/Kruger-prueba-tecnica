@@ -11,7 +11,11 @@
       "fechaNacimiento": "21-12-1998",
       "direccionDomicilio": "Joaquin Ruales",
       "telefono": "0995882909",
-      "userName": "stalin_ch98"
+      "userName": "stalin_ch98",
+      "estaVacunado": true,
+      "tipoVacuna": "Pfizer",
+      "fechaVacunacion": "2021-05-01",
+      "numeroDosis": 2
     },
     {
       "id": 2,
@@ -20,11 +24,15 @@
       "apellidos": "Danneil",
       "email": "idanneil0@g.co",
       "rol": "Empleado",
-      "password": "JKEOys",
+      "password": "asd123",
       "fechaNacimiento": "22-01-2021",
       "direccionDomicilio": "2748 Superior Avenue",
       "telefono": "611-279-4829",
-      "userName": "ilka_da12"
+      "userName": "ilka_da12",
+      "estaVacunado": true,
+      "tipoVacuna": "AstraZeneca",
+      "fechaVacunacion": "2021-08-01",
+      "numeroDosis": 3
     },
     {
       "id": 3,
@@ -37,111 +45,11 @@
       "fechaNacimiento": "01-03-2020",
       "direccionDomicilio": "212 Canary Crossing",
       "telefono": "212-699-0573",
-      "userName": "gordon_wa20"
-    },
-    {
-      "id": 4,
-      "cedula": "545690197",
-      "nombres": "Kipper",
-      "apellidos": "Colson",
-      "email": "kcolson2@reuters.com",
-      "rol": "Empleado",
-      "password": "CJIoj5bj",
-      "fechaNacimiento": "24-03-2020",
-      "direccionDomicilio": "6 Dawn Center",
-      "telefono": "341-105-0914",
-      "userName": "kipper_co40"
-    },
-    {
-      "id": 5,
-      "cedula": "51079953",
-      "nombres": "Karol",
-      "apellidos": "Lyenyng",
-      "email": "klyenyng3@tripadvisor.com",
-      "rol": "Empleado",
-      "password": "2Lt0vBpsd",
-      "fechaNacimiento": "10-06-2021",
-      "direccionDomicilio": "574 Alpine Plaza",
-      "telefono": "506-753-0403",
-      "userName": "karol_ly21"
-    },
-    {
-      "id": 6,
-      "cedula": "65162765",
-      "nombres": "Gretal",
-      "apellidos": "M'cowis",
-      "email": "gmcowis4@indiatimes.com",
-      "rol": "Empleado",
-      "password": "qAcMK3SV",
-      "fechaNacimiento": "19-12-2021",
-      "direccionDomicilio": "71187 Mitchell Plaza",
-      "telefono": "171-527-7485",
-      "userName": "gretal_mc21"
-    },
-    {
-      "id": 7,
-      "cedula": "50952001",
-      "nombres": "Gertrude",
-      "apellidos": "Asgodby",
-      "email": "gasgodby5@discovery.com",
-      "rol": "Empleado",
-      "password": "hodesyJs",
-      "fechaNacimiento": "16-11-2020",
-      "direccionDomicilio": "18069 Drewry Place",
-      "telefono": "346-849-9290",
-      "userName": "gertrude_as20"
-    },
-    {
-      "id": 8,
-      "cedula": "58633232",
-      "nombres": "Lindy",
-      "apellidos": "Elies",
-      "email": "lelies6@sun.com",
-      "rol": "Empleado",
-      "password": "co2nozcP",
-      "fechaNacimiento": "16-03-2020",
-      "direccionDomicilio": "07277 Spenser Plaza",
-      "telefono": "408-147-3430",
-      "userName": "lindy_el20"
-    },
-    {
-      "id": 9,
-      "cedula": "609861011",
-      "nombres": "Cheryl",
-      "apellidos": "Alen",
-      "email": "calen7@netscape.com",
-      "rol": "Empleado",
-      "password": "tonzmzHV",
-      "fechaNacimiento": "12-12-2019",
-      "direccionDomicilio": "30 Dorton Circle",
-      "telefono": "683-100-0536",
-      "userName": "cheryl_al19"
-    },
-    {
-      "id": 10,
-      "cedula": "35356687",
-      "nombres": "Mikael",
-      "apellidos": "Onyon",
-      "email": "monyon8@sphinn.com",
-      "rol": "Empleado",
-      "password": "jKjdyBb",
-      "fechaNacimiento": "08-10-2021",
-      "direccionDomicilio": "4864 Harper Circle",
-      "telefono": "964-179-3438",
-      "userName": "mikael_on21"
-    },
-    {
-      "id": 11,
-      "cedula": "609050402",
-      "nombres": "Diahann",
-      "apellidos": "de Guerre",
-      "email": "ddeguerre9@jimdo.com",
-      "rol": "Empleado",
-      "password": "maXtrZVwny2",
-      "fechaNacimiento": "13-07-2020",
-      "direccionDomicilio": "3 Spaight Avenue",
-      "telefono": "716-622-9189",
-      "userName": "diahann_de20"
+      "userName": "gordon_wa20",
+      "estaVacunado": false,
+      "tipoVacuna": null,
+      "fechaVacunacion": null,
+      "numeroDosis": null
     }
   ]
 }

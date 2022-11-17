@@ -25,4 +25,8 @@ export interface Usuario {
     direccionDomicilio?: string,
     telefono?: string,
     userName: string,
+    estaVacunado: boolean,
+    tipoVacuna?: string | null,
+    fechaVacunacion?: string | null,
+    numeroDosis?: number | null,
 }

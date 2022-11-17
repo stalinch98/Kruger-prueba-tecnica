@@ -7,8 +7,6 @@ A
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 L
 src/assets/img/login_img.svg,1\a\1a2664d3e3faa00b14c3037346348f0c956cc24e
-K
-src/assets/styles/Login.css,f\3\f3b02778332420a5d55d14a9e9665b8d504e1e59
 =
 src/index.tsx,5\a\5ab44fe33ca96299f51ad4778a73e425b92bf439
 ;
@@ -18,8 +16,6 @@ H
 :
 
 .gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302
-I
-src/interfaces/general.ts,d\c\dca51f5fdf805a3bb4a7afe9aa54383bcca07fcb
 I
 src/components/Footer.tsx,6\a\6a1906fbef47b21e13258a3accfe644e256f3344
 I
