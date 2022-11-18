@@ -57,8 +57,6 @@ R
 "src/store/empleado/EmpleadoSaga.ts,b\e\be6f7feff6186ccc7e0cf34ed0a13605c647eb47
 L
 src/store/login/loginSaga.ts,9\0\90057e7410a43175c4b32757095ffd534e205022
-P
- src/components/ModalEmpleado.tsx,a\0\a0579340356ffc60e2370c7f9ad1ad027fa94f90
 N
 src/assets/files/usuarios.json,6\b\6b2dbf33b658bb3a3b2c43cb020c9d0475481c6d
 9

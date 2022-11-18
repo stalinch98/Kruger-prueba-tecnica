@@ -5,10 +5,17 @@ import {Usuario} from "../interfaces/login";
 import {RootState} from "../store";
 import {useEffect, useState} from "react";
 import {EMPLEADO_ACTUALIZAR_INFORMACION} from "../store/empleado/types";
+import {useForm} from "react-hook-form";
 
 const ModalEmpleado = () => {
 
     const dispatch = useDispatch();
+
+    const {
+        register,
+        handleSubmit,
+        formState: {errors}
+    } = useForm();
 
     const {
         LoginReduce, EmpleadoReduce
@@ -30,6 +37,10 @@ const ModalEmpleado = () => {
         setUpdatedUser(user!);
     }, []);
 
+    const handleSaveUpdateUser = (e: any) => {
+        dispatch({type: EMPLEADO_ACTUALIZAR_INFORMACION, payload: e});
+    }
+
     return (
         <div>
             <Modal
@@ -45,19 +56,37 @@ const ModalEmpleado = () => {
                         Editar mi información
                     </Modal.Title>
                 </Modal.Header>
-                <Modal.Body>
-                    <form>
+                <form onSubmit={handleSubmit(handleSaveUpdateUser)}>
+                    <Modal.Body>
+
                         <div className="row">
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Nombres</label>
                                 <input type="text" className="form-control" defaultValue={updatedUser.nombres}
-                                       onChange={(e) => setUpdatedUser({...updatedUser, nombres: e.target.value})}
+                                       {...register('nombres', {
+                                           required: true,
+                                           pattern: {
+                                               value: /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/,
+                                               message: 'Nombres invalidos'
+                                           }
+                                       })}
                                 />
+                                {errors?.nombres?.type === 'required' && (
+                                    <p className="administrador__error">Este campo es requerido</p>
+                                )}
+                                {errors.nombres?.message &&
+                                    <p className="administrador__error">{errors.nombres?.message + ""}</p>}
                             </div>
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Apellidos</label>
                                 <input type="text" className="form-control" defaultValue={updatedUser.apellidos}
-                                       onChange={(e) => setUpdatedUser({...updatedUser, apellidos: e.target.value})}
+                                       {...register('apellidos', {
+                                           required: true,
+                                           pattern: {
+                                               value: /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/,
+                                               message: 'Apellidos invalidos'
+                                           }
+                                       })}
                                 />
                             </div>
                         </div>
@@ -65,14 +94,36 @@ const ModalEmpleado = () => {
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Cédula</label>
                                 <input type="text" className="form-control" defaultValue={updatedUser.cedula}
-                                       onChange={(e) => setUpdatedUser({...updatedUser, cedula: e.target.value})}
+                                       {...register('cedula', {
+                                           required: true,
+                                           pattern: {
+                                               value: /^[0-9]{10,10}$/g,
+                                               message: 'Cédula invalida'
+                                           }
+                                       })}
                                 />
+                                {errors?.cedula?.type === 'required' && (
+                                    <p className="administrador__error">Este campo es requerido</p>
+                                )}
+                                {errors.cedula?.message &&
+                                    <p className="administrador__error">{errors.cedula?.message + ""}</p>}
                             </div>
                             <div className="col">
                                 <label htmlFor="formGroupExampleInput">Email</label>
                                 <input type="text" className="form-control" defaultValue={updatedUser.email}
-                                       onChange={(e) => setUpdatedUser({...updatedUser, email: e.target.value})}
+                                       {...register('email', {
+                                           required: true,
+                                           pattern: {
+                                               value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                                               message: 'Email invalido'
+                                           }
+                                       })}
                                 />
+                                {errors?.email?.type === 'required' && (
+                                    <p className="administrador__error">Este campo es requerido</p>
+                                )}
+                                {errors.email?.message &&
+                                    <p className="administrador__error">{errors.email?.message + ""}</p>}
                             </div>
                         </div>
                         <div className="row">
@@ -167,18 +218,12 @@ const ModalEmpleado = () => {
                                 )
                             }
                         </div>
-                    </form>
-                </Modal.Body>
-                <Modal.Footer>
-                    <button className="btn btn-secondarybtn btn-secondary" onClick={() => {
-                        dispatch(setOpenModal(false));
-                    }}>Cerrar
-                    </button>
-                    <button className="btn btn-secondarybtn btn-primary" onClick={() => {
-                        dispatch({type: EMPLEADO_ACTUALIZAR_INFORMACION, payload: updatedUser});
-                    }}>Guardar
-                    </button>
-                </Modal.Footer>
+                    </Modal.Body>
+                    <Modal.Footer>
+                        <button className="btn btn-secondarybtn btn-primary" type="submit">Guardar
+                        </button>
+                    </Modal.Footer>
+                </form>
             </Modal>
         </div>
     )
