@@ -1,6 +1,6 @@
 import '../assets/styles/Administrador.css'
 import {ChangeEvent, useEffect, useState} from "react";
-import {contains, dateToYY_MM_DD, objectIsVoid} from "../helpers/utilsObject";
+import {contains, dateToYY_MM_DD, objectIsVoid} from "../helpers/utils";
 import {useDispatch, useSelector} from "react-redux";
 import {RootState} from "../store";
 import {useNavigate} from "react-router-dom";
@@ -8,7 +8,7 @@ import {ADMINISTRADOR_ELIMINAR_USER} from "../store/administrador/types";
 import {setCurrentUser, setIsEdit, setOpenModal} from "../store/administrador/actions";
 import ModalActualizarUsuario from "../components/ModalActualizarUsuario";
 import {Usuario} from "../interfaces/login";
-import {AiOutlineSearch} from "react-icons/ai";
+import {AiOutlineSearch, AiOutlineClear} from "react-icons/ai";
 import {Intervalo} from "../interfaces/administrador";
 
 const Administrador = () => {
@@ -72,6 +72,10 @@ const Administrador = () => {
         setDataTable(newResult);
     }
 
+    const handleClearFilter = () => {
+        setDataTable(dataUsuarios);
+    }
+
     return (
         <section className="administrador">
             <div className="usuarios">
@@ -116,6 +120,11 @@ const Administrador = () => {
                             <div className="col">
                                 <button className="btn btn-secondary" onClick={handleSearchIntervalo}>
                                     <AiOutlineSearch/>
+                                </button>
+                            </div>
+                            <div className="col">
+                                <button className="btn btn-secondary" onClick={handleClearFilter}>
+                                    <AiOutlineClear/>
                                 </button>
                             </div>
                         </div>

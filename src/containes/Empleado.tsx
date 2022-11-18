@@ -4,7 +4,7 @@ import '../assets/styles/Administrador.css'
 import ModalEmpleado from "../components/ModalEmpleado";
 import {setOpenModal} from "../store/empleado/actions";
 import {useEffect} from "react";
-import {objectIsVoid} from "../helpers/utilsObject";
+import {objectIsVoid} from "../helpers/utils";
 import {useNavigate} from "react-router-dom";
 
 const Empleado = () => {

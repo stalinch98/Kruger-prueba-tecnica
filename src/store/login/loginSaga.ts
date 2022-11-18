@@ -5,7 +5,7 @@ import {setDataUsuarios, setUsuarioLogueado} from "./actions";
 import jsonData from "../../assets/files/usuarios.json";
 import {RootState} from "../index";
 import {toast} from 'react-toastify';
-import {objectIsVoid} from "../../helpers/utilsObject";
+import {objectIsVoid} from "../../helpers/utils";
 
 const Login = (state: RootState) => state.LoginReduce;
 

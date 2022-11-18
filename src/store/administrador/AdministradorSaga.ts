@@ -5,7 +5,7 @@ import {RootState} from "../index";
 import {setDataUsuarios} from "../login/actions";
 import {setCurrentUser, setIsEdit, setOpenModal} from "./actions";
 import {toast} from "react-toastify";
-import {generatePassword, generteUserName} from "../../helpers/utilsObject";
+import {generatePassword, generteUserName} from "../../helpers/utils";
 
 const Login = (state: RootState) => state.LoginReduce;
 

@@ -4,7 +4,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {LOGIN_INGRESAR, LOGIN_LOAD_INITIAL_DATA} from "../store/login/types";
 import {useEffect} from "react";
 import {RootState} from "../store";
-import {objectIsVoid} from "../helpers/utilsObject";
+import {objectIsVoid} from "../helpers/utils";
 import {useNavigate} from "react-router-dom";
 import {useForm} from 'react-hook-form';
 
