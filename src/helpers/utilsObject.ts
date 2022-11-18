@@ -16,3 +16,7 @@ export const generatePassword = () => {
     }
     return result;
 };
+
+export const contains = (text: string, term: string) => {
+    return text.toLowerCase().indexOf(term.toLowerCase()) >= 0;
+};
