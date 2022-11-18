@@ -41,6 +41,17 @@ const Administrador = () => {
         setDataTable(result);
     }
 
+    const handleSearchEstadoVacunacion = (event: ChangeEvent<HTMLSelectElement>) => {
+        let value = event.target.value;
+        const result = dataUsuarios.reduce((acc: Usuario[], item: Usuario) => {
+            if (contains(item.estaVacunado ?? '', value === 'Elegir...' ? '' : value)) {
+                acc.push(item);
+            }
+            return acc;
+        }, []);
+        setDataTable(result);
+    }
+
     return (
         <section className="administrador">
             <div className="usuarios">
@@ -54,9 +65,21 @@ const Administrador = () => {
                     </div>
                 </div>
                 <div className="row mt-2 mb-2">
-                    <div className="col-3">
-                        <input className="form-control" type="text" placeholder="Buscar por tipo de vacuna..."
+                    <div className="col-2">
+                        <input className="form-control" type="text" placeholder="Tipo de vacuna..."
                                onChange={handleSearchTipoVacuna}/>
+                    </div>
+                    <div className="col-4">
+                        <div className="input-group">
+                            <label className="input-group-text" htmlFor="inputGroupSelect01">Estado de
+                                vacunación</label>
+                            <select className="custom-select" id="inputGroupSelect01"
+                                    onChange={handleSearchEstadoVacunacion}>
+                                <option selected>Elegir...</option>
+                                <option value="Si">Si</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
 
