@@ -19,3 +19,8 @@ tr td {
     color: var(--text-color);
     position: relative;
 }
+
+.administrador__error{
+    color: var(--bs-red);
+    font-weight: 400;
+}
