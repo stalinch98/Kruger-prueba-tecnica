@@ -1,3 +1,6 @@
+import moment from 'moment-timezone';
+import 'moment/locale/es';
+
 export const objectIsVoid = (obj: Object) => {
     return (Object.keys(obj).length === 0)
 }
@@ -20,3 +23,7 @@ export const generatePassword = () => {
 export const contains = (text: string, term: string) => {
     return text.toLowerCase().indexOf(term.toLowerCase()) >= 0;
 };
+
+export const dateToYY_MM_DD = (fecha: Date) => {
+    return moment(fecha).format('YYYY-MM-DD');
+}

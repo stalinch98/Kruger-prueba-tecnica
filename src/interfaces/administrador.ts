@@ -5,3 +5,8 @@ export interface StateAdministrador {
     openModal: boolean,
     isEdit: boolean,
 }
+
+export interface Intervalo {
+    inicio: string,
+    fin: string
+}

@@ -1,8 +1,6 @@
 
 =
 src/index.css,c\5\c5d38a62d1faae90a2acaa34b79a7ef365c917e4
-A
-public/index.html,f\4\f43ecdf8d666ee908aacce037b4cd72159e4741b
 \
 ,.idea/inspectionProfiles/Project_Default.xml,4\9\496a238a6afa168dbaf6efd37bb459331589579c
 L
@@ -29,8 +27,6 @@ M
 src/store/empleado/actions.ts,d\7\d7370367b5f20645ab60243cf31d6e66c9fac7da
 J
 src/interfaces/empleado.ts,a\6\a65c29269af0d923c737e0d06f8d331f2ae1b994
-J
-src/containes/Empleado.tsx,6\a\6aa8847da1d8fcf7b730f4489c79890b955be592
 I
 src/store/rootReducers.ts,b\7\b77576fb2d8aa0c740390b760becca93498bbb48
 T
@@ -47,7 +43,3 @@ N
 src/assets/files/usuarios.json,6\b\6b2dbf33b658bb3a3b2c43cb020c9d0475481c6d
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-9
-	yarn.lock,5\3\53585a096fe3a3b96321113856ae62602995a33b
-<
-package.json,7\0\7030d0b2f71b999ff89a343de08c414af32fc93a
