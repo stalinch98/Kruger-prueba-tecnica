@@ -9,14 +9,10 @@ L
 src/index.tsx,5\a\5ab44fe33ca96299f51ad4778a73e425b92bf439
 ;
 src/App.tsx,8\3\835da56f32df714aaed6285a5b7fc3a7807851e4
-I
-src/components/Footer.tsx,6\a\6a1906fbef47b21e13258a3accfe644e256f3344
 B
 src/store/index.ts,7\8\788f62f848ec0936ef56cb3abc11e629c69f787c
 @
 src/App.test.tsx,1\f\1fc1c06a0502bf303f8ba35e530938a98e7e35b2
-J
-src/store/login/actions.ts,d\e\deb4842f3f86d095e1a9baa3bb8fd6cf4ad93db4
 P
  src/store/administrador/types.ts,3\6\3673c0cf2cb75e1c2f9d37cb3bf21a8d7d2f0b34
 ^
@@ -33,8 +29,6 @@ T
 $src/store/empleado/EmpleadoReduce.ts,3\e\3ebb620e8a640a150ba85a59e66ac87aa1ba4a99
 I
 src/interfaces/general.ts,d\c\dca51f5fdf805a3bb4a7afe9aa54383bcca07fcb
-I
-src/components/Layout.tsx,b\4\b4694ebb3940bc08ad73f040eaf0c8d049cc8dab
 F
 src/store/rootSagas.ts,8\7\87357e47e7086d3d7598356c187d9ab707d8a674
 K
